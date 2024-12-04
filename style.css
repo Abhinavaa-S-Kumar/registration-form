@@ -1,0 +1,120 @@
+/* Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6e45e2, #88d3ce);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Form Container */
+.form-container {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 500px;
+    width: 100%;
+    color: #fff;
+}
+
+/* Form Elements */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #f5f5f5;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+input:focus, select:focus, textarea:focus {
+    border: 1px solid #88d3ce;
+    box-shadow: 0 0 5px #88d3ce;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+button {
+    background: linear-gradient(135deg, #6e45e2, #88d3ce);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #88d3ce, #6e45e2);
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Smooth Input Focus Animation */
+textarea {
+    resize: none;
+}
+
+/* Additional Responsiveness */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+/* Fix for Gender Dropdown Visibility */
+select {
+    background: rgba(255, 255, 255, 0.3); /* Subtle background for dropdown */
+    color: #fff; /* Ensure text is visible */
+    appearance: none; /* Remove default styling for consistency across browsers */
+    -webkit-appearance: none; /* Safari */
+    -moz-appearance: none; /* Firefox */
+    position: relative;
+    cursor: pointer;
+}
+
+/* Add dropdown arrow for better user experience */
+select::after {
+    content: '▼';
+    position: absolute;
+    right: 10px;
+    pointer-events: none;
+}
+
+option {
+    background: #6e45e2; /* Visible color for dropdown options */
+    color: white; /* Option text color */
+}
